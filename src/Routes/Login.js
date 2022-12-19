@@ -31,7 +31,8 @@ const Login = () => {
         <br />
         <br />
         <input
-          type="text"
+          type="email"
+          placeholder="email"
           name="username"
           value={username}
           onChange={(e) => {
@@ -44,7 +45,8 @@ const Login = () => {
         <br />
         <br />
         <input
-          type="text"
+          type="password"
+          placeholder="password"
           name="password"
           value={password}
           onChange={(e) => {
