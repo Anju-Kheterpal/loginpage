@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { app } from "../firebase-config";
+import logo from "../Assets/LOGO.png";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -25,11 +26,11 @@ const Login = () => {
 
   return (
     <div style={{ display: "grid", placeItems: "center" }}>
-      <h3>Log In</h3>
-      <form onSubmit={submit}>
-        <label htmlFor="username">Email</label>
-        <br />
-        <br />
+      <br />
+      <br />
+      <img src={logo} alt="" />
+      <h1>Log In</h1>
+      <form className="form" onSubmit={submit}>
         <input
           type="email"
           placeholder="email"
@@ -39,11 +40,7 @@ const Login = () => {
             setUsername(e.target.value);
           }}
         />
-        <br />
-        <br />
-        <label htmlFor="password">Password</label>
-        <br />
-        <br />
+
         <input
           type="password"
           placeholder="password"
@@ -56,6 +53,13 @@ const Login = () => {
         <br />
         <br />
         <button type="submit">submit</button>
+        <br />
+        <br />
+        <span>
+          <Link to="/signup">Create Account</Link>
+        </span>
+        <br />
+        <br />
       </form>
     </div>
   );

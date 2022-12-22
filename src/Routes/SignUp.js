@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { app } from "../firebase-config";
+import logo from "../Assets/LOGO.png";
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
@@ -26,11 +27,11 @@ const SignUp = () => {
 
   return (
     <div style={{ display: "grid", placeItems: "center" }}>
-      <h3>Sign Up</h3>
-      <form onSubmit={submit}>
-        <label htmlFor="username">Email</label>
-        <br />
-        <br />
+      <br />
+      <br />
+      <img src={logo} alt="" />
+      <h1>Sign Up</h1>
+      <form className="form" onSubmit={submit}>
         <input
           type="email"
           placeholder="email"
@@ -40,11 +41,7 @@ const SignUp = () => {
             setUsername(e.target.value);
           }}
         />
-        <br />
-        <br />
-        <label htmlFor="password">Password</label>
-        <br />
-        <br />
+
         <input
           type="password"
           placeholder="password"
@@ -58,6 +55,11 @@ const SignUp = () => {
         <br />
         <button type="submit">submit</button>
 
+        <br />
+        <br />
+        <span>
+          <Link to="/login">Login to your Account</Link>
+        </span>
         <br />
         <br />
       </form>
