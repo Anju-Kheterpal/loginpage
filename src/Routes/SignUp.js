@@ -30,7 +30,7 @@ const SignUp = () => {
       <br />
       <br />
       <img src={logo} alt="" />
-      <h1>Sign Up</h1>
+      <h1 style={{color: "white"}}>Sign Up</h1>
       <form className="form" onSubmit={submit}>
         <input
           type="email"

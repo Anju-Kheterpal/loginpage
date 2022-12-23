@@ -29,7 +29,7 @@ const Login = () => {
       <br />
       <br />
       <img src={logo} alt="" />
-      <h1>Log In</h1>
+      <h1 style={{color: "white"}}>Log In</h1>
       <form className="form" onSubmit={submit}>
         <input
           type="email"
