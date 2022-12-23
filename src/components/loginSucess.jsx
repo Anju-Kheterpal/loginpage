@@ -401,7 +401,8 @@ const LoginSuccess = () => {
             style={{
               paddingTop: "150px",
               color: "whitesmoke",
-              paddingLeft: "780px",
+              textAlign: "right",
+              marginRight: "400px",
               fontFamily: "'Arvo', serif",
             }}
           >
@@ -413,7 +414,8 @@ const LoginSuccess = () => {
             style={{
               paddingTop: "7px",
               color: "whitesmoke",
-              paddingLeft: "900px",
+              textAlign: "right",
+              marginRight: "200px",
               fontFamily: "'Arvo', serif",
             }}
           >
@@ -425,7 +427,8 @@ const LoginSuccess = () => {
             style={{
               paddingTop: "7px",
               color: "whitesmoke",
-              paddingLeft: "1180px",
+              textAlign: "right",
+              marginRight: "150px",
               fontFamily: "'Arvo', serif",
             }}
           >
@@ -445,7 +448,6 @@ const LoginSuccess = () => {
               marginLeft: "800px",
               marginTop: "20px",
               fontSize: "20px",
-              textAlign: "center",
               border: "0px",
               borderRadius: "10px",
             }}
