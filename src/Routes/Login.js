@@ -15,7 +15,7 @@ const Login = () => {
     const authentication = getAuth(app);
     signInWithEmailAndPassword(authentication, username, password).then(
       (response) => {
-        navigate("/successful");
+        navigate("/loginSuccessful");
         sessionStorage.setItem(
           "Auth Token",
           response._tokenResponse.refreshToken

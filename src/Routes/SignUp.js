@@ -58,7 +58,7 @@ const SignUp = () => {
         <br />
         <br />
         <span>
-          <Link to="/login">Login to your Account</Link>
+          <Link to="/">Login to your Account</Link>
         </span>
         <br />
         <br />
