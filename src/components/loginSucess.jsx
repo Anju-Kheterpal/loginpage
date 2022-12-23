@@ -430,7 +430,7 @@ const LoginSuccess = () => {
             }}
           >
             <font size="7" align="centre">
-              CENTER
+              CENTRE
             </font>
           </h3>
 
