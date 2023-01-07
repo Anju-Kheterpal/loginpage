@@ -3,9 +3,11 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { app } from "../firebase-config";
 import logo from "../Assets/LOGO.png";
+import { useAlert } from "react-alert";
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
+  const alert = useAlert();
 
   const [password, setPassword] = useState("");
 
@@ -16,7 +18,8 @@ const SignUp = () => {
     const authentication = getAuth(app);
     createUserWithEmailAndPassword(authentication, username, password).then(
       (response) => {
-        navigate("/successful");
+        alert.show("Account created")
+        navigate("/signup");
         sessionStorage.setItem(
           "Auth Token",
           response._tokenResponse.refreshToken
